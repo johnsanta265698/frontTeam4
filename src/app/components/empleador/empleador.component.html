@@ -1311,10 +1311,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>NIT</td>
+                            <tr *ngFor="let usuario of usuarios">
+                                <td colspan="3">{{usuario.nombre}}</td>
+                                <!-- <td></td>
                                 <td>12345678</td>
-                                <td>HeinSohn</td>
+                                <td>HeinSohn</td> -->
                                 <td>
                                     <div class="d-flex justify-content-center">
                                         <button class="btn btn-info">Consultar</button>

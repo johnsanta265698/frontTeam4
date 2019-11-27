@@ -1389,10 +1389,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1017149016</td>
+                            <tr *ngFor="let usuario of usuarios">
+                                <td>{{usuario.nombre}}</td>
+                                <!-- <td>1017149016</td>
                                 <td>Julián Esteban</td>
-                                <td>Madrid Ospina</td>
+                                <td>Madrid Ospina</td> -->
                                 <td>
                                     <div class="d-flex justify-content-center">
                                         <button class="btn btn-info">Consultar</button>
@@ -1409,7 +1410,7 @@
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td>1016941017</td>
                                 <td>Cecilia</td>
                                 <td>Hincapié Moreno</td>
@@ -1448,7 +1449,7 @@
                                         <button class="btn btn-danger">Eliminar</button>
                                     </div>
                                 </td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>

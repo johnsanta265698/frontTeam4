@@ -4,7 +4,7 @@ import IUsuario from "../interfaces/users";
 import { Observable } from "rxjs";
 
 @Injectable()
-export class UsuariosService {
+export class UsersServices {
   constructor(private http: HttpClient) {}
 
   getUsuarios(): Observable<IUsuario[]> {
