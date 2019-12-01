@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { MDBBootstrapModule, NavbarModule, IconsModule, TableModule} from 'angular-bootstrap-md'
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -20,7 +21,9 @@ import { UsersServices } from './services/users.services';
     HttpClientModule,
     NavbarModule,
     IconsModule,
-    TableModule
+    TableModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [UsersServices, EmpleadorService],
   bootstrap: [AppComponent]
