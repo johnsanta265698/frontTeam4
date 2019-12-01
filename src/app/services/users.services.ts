@@ -42,7 +42,12 @@ export class UsersServices {
       })
     };
 
-    
+    return this.http.put<IUsuario>(
+      `${this._empleado}/usuarios/${indice}`,
+      usuario,
+      httpOptions
+    )
+
 
   }
 
