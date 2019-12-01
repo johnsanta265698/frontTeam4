@@ -3,6 +3,6 @@ export default interface IUsuario {
     nombre: string;
     apellidos: string;
     celular: string;
-    correo: string;
+    direccion: string;
     empresa: string;
   }
