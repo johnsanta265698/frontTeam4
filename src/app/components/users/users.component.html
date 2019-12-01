@@ -185,6 +185,49 @@
                     </tr>
                 </tbody>
             </table>
+            <div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <h4 *ngIf="usuarioIndice != null" class="modal-title w-100" id="myModalLabel">
+                                Editar Usuario
+                            </h4>
+                            <h4 *ngIf="usuarioIndice == null" class="modal-title w-100" id="myModalLabel">
+                                Nuevo Usuario
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="md-form">
+                                <mdb-icon fas icon="sticky-note"></mdb-icon>
+            
+                                <input type="text" id="nombre" class="form-control" mdbInput [(ngModel)]="nombreInput" />
+                                <label for="nombre">Nombre(s)</label>
+                            </div>
+                            <div class="md-form">
+                                <mdb-icon fas icon="sticky-note"></mdb-icon>
+            
+                                <input type="text" id="apellido" class="form-control" mdbInput [(ngModel)]="nombreInput" />
+                                <label for="nombre">Apellidos(s)</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close"
+                                (click)="basicModal.hide()" mdbWavesEffect>
+                                Cerrar
+                            </button>
+                            <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect (click)="
+                          usuarioIndice == null ? createUsuario() : guardarEdicionUsuario()
+                        ">
+                                Guardar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -302,6 +345,13 @@
                         <div class="col-xl-8">
                             <input type="email" class="fmy-1 form-control" id="exampleInputEmail1"
                                 aria-describedby="emailHelp" placeholder="Ingrese su correo electrónico">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="Empresa" class="col-xl-4 col-form-label">Empresa en la que trabaja:&nbsp;</label>
+                        <div class="col-xl-8">
+                            <input type="text" name="" id="Empresa" placeholder="Ingrese la empresa en la que trabaja"
+                                class="form-control" required>
                         </div>
                     </div>
                    <!--  <div class="form-group row">

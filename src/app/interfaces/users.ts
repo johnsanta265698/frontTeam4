@@ -4,4 +4,5 @@ export default interface IUsuario {
     apellidos: string;
     celular: string;
     correo: string;
+    empresa: string;
   }

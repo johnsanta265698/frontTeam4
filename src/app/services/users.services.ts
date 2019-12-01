@@ -6,16 +6,18 @@ import { Observable } from "rxjs";
 @Injectable()
 export class UsersServices {
   constructor(private http: HttpClient) {}
-
+  private _empleado = "localhost:8080/heinsohn-api/rest/v2/empleados"
   getUsuarios(): Observable<IUsuario[]> {
     return this.http.get<IUsuario[]>(
-      "https://bootcamp-dia-3.camilomontoyau.now.sh/usuarios"
+      `${this._empleado}`
+      //"https://bootcamp-dia-3.camilomontoyau.now.sh/usuarios"
     );
   }
 
   deleteUsuario(indice: number): Observable<any>{
     return this.http.delete<any>(
-      `https://bootcamp-dia-3.camilomontoyau.now.sh/usuarios/${indice}`
+      `${this._empleado}/${indice}`
+      //`https://bootcamp-dia-3.camilomontoyau.now.sh/usuarios/${indice}`
     );
   }
 
@@ -26,11 +28,22 @@ export class UsersServices {
       })
     };
     return this.http.post<IUsuario>(
-      "https://bootcamp-dia-3.camilomontoyau.now.sh/usuarios",
+      `${this._empleado}`,
+      //"https://bootcamp-dia-3.camilomontoyau.now.sh/usuarios",
       usuario,
       httpOptions
     );
   }
 
+  editUsuario(indice: number, usuario: IUsuario): Observable<IUsuario>{
+    const httpOptions = {
+      headers: new HttpHeaders({
+        "Content-Type": "application/json"
+      })
+    };
+
+    
+
+  }
 
 }

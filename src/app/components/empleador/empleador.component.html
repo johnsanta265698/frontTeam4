@@ -74,7 +74,7 @@
                         <th colspan="3">Datos de los empleadores</th>
                         <th colspan="3">
                             <button type="button" mdbBtn color="success" class="relative waves-light" mdbWavesEffect
-                                (click)="basicModal.show()">
+                            (click)="usuarioIndice = null; nombreInput = ''; basicModal.show()">
                                 Crear Empleador
                             </button>
                         </th>
@@ -109,6 +109,49 @@
                     </tr>
                 </tbody>
             </table>
+            <!-- <div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <h4 *ngIf="usuarioIndice != null" class="modal-title w-100" id="myModalLabel">
+                                Editar Usuario
+                            </h4>
+                            <h4 *ngIf="usuarioIndice == null" class="modal-title w-100" id="myModalLabel">
+                                Nuevo Usuario
+                            </h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="md-form">
+                                <mdb-icon fas icon="sticky-note"></mdb-icon>
+            
+                                <input type="text" id="nombre" class="form-control" mdbInput [(ngModel)]="nombreInput" />
+                                <label for="nombre">Nombre(s)</label>
+                            </div>
+                            <div class="md-form">
+                                <mdb-icon fas icon="sticky-note"></mdb-icon>
+            
+                                <input type="text" id="apellido" class="form-control" mdbInput [(ngModel)]="nombreInput" />
+                                <label for="nombre">Apellidos(s)</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close"
+                                (click)="basicModal.hide()" mdbWavesEffect>
+                                Cerrar
+                            </button>
+                            <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect (click)="
+                          usuarioIndice == null ? createUsuario() : guardarEdicionUsuario()
+                        ">
+                                Guardar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
         </div>
     </div>
     <div class="row">
@@ -186,10 +229,17 @@
                                 class="form-control" required>
                         </div>
                     </div>
-                    <div class="form-group row">
+                   <!--  <div class="form-group row">
                         <label for="VEmail" class="col-xl-4 col-form-label">Verificar correo:&nbsp;</label>
                         <div class="col-xl-8">
                             <input type="email" name="" id="VEmail" placeholder="Verifique el correo electrónico"
+                                class="form-control" required>
+                        </div>
+                    </div> -->
+                    <div class="form-group row">
+                        <label for="Direccion" class="col-xl-4 col-form-label">Dirección:&nbsp;</label>
+                        <div class="col-xl-8">
+                            <input type="text" name="" id="Direccion" placeholder="Ingrese la dirección de la empresa"
                                 class="form-control" required>
                         </div>
                     </div>

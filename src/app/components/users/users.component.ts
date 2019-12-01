@@ -4,8 +4,8 @@ import { UsersServices } from 'src/app/services/users.services';
     selector: 'users-event',
     templateUrl: './users.component.html',
 })
-export class UsersComponent { //implements OnInit
-   /*  public usuarios = [];
+export class UsersComponent implements OnInit { //
+   public usuarios = [];
 
     constructor(private usuariosService: UsersServices) {}
   
@@ -15,5 +15,5 @@ export class UsersComponent { //implements OnInit
         this.usuarios = data;
       });
     }
- */
+
 }
