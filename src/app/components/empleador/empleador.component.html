@@ -71,7 +71,7 @@
             <table mdbTable class="table" striped="true">
                 <thead class="black white-text">
                     <tr>
-                        <th colspan="4">Datos de los empleadores</th>
+                        <th colspan="3">Datos de los empleadores</th>
                         <th colspan="4">
                             <button type="button" mdbBtn color="success" class="relative waves-light" mdbWavesEffect
                             (click)="usuarioIndice = null; nombreInput = ''; basicModal.show()">
@@ -121,7 +121,7 @@
                         <td>12345678</td>
                         <td>HeinSohn</td>
                         <td>Desarrollo de Software</td>
-                        <td>admin@heinsohn.com.co</td>
+                        <!-- <td>admin@heinsohn.com.co</td> -->
                         <td>Calle falsa 123</td>
                         <td>2178264</td>
                         <td>
@@ -169,10 +169,10 @@
                                 <input type="text" id="actividad" class="form-control" mdbInput [(ngModel)]="actividadInput" />
                                 <label for="actividad">Actividad:&nbsp;</label>
                             </div>
-                            <div class="md-form">
+                            <!-- <div class="md-form">
                                 <input type="text" id="email" class="form-control" mdbInput [(ngModel)]="emailInput" />
                                 <label for="email">Email:&nbsp;</label>
-                            </div>
+                            </div> -->
                             <div class="md-form">
                                 <input type="text" id="direccion" class="form-control" mdbInput [(ngModel)]="direccionInput" />
                                 <label for="direccion">Dirección:&nbsp;</label>
