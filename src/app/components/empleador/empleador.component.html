@@ -84,7 +84,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- <tr mdbTableCol *ngFor="let empleador of empleadores; let i = index">
+                    <tr mdbTableCol *ngFor="let empleador of empleadores; let i = index">
                             <td scope="row">{{i}}</td>
                             <td>
                                 {{empleador.documento}}
@@ -95,9 +95,9 @@
                             <td>
                                 {{empleador.actividad}}
                             </td>
-                            <td>
+                           <!--  <td>
                                 {{empleador.email}}
-                            </td>
+                            </td> -->
                             <td>
                                 {{empleador.direccion}}
                             </td>
@@ -115,13 +115,13 @@
                                     Eliminar
                                 </button>
                             </td>
-                        </tr> -->
-                    <tr>
+                        </tr>
+                   <!--  <tr>
                         <td>1</td>
                         <td>12345678</td>
                         <td>HeinSohn</td>
                         <td>Desarrollo de Software</td>
-                        <!-- <td>admin@heinsohn.com.co</td> -->
+                        <td>admin@heinsohn.com.co</td>
                         <td>Calle falsa 123</td>
                         <td>2178264</td>
                         <td>
@@ -134,11 +134,8 @@
                             <button type="button" mdbBtn color="danger" class="relative waves-light" mdbWavesEffect>
                                 Eliminar
                             </button>
-                        </td>
-                        <!-- <td>
-                            
-                        </td> -->
-                    </tr>
+                        </td> 
+                    </tr>-->
                 </tbody>
             </table>
             <div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel"
