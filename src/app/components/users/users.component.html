@@ -271,25 +271,21 @@
                                 <input type="text" id="celular" class="form-control" mdbInput [(ngModel)]="celularInput" />
                                 <label for="celular">Celular:&nbsp;</label>
                             </div>
-                            <div class="md-form">
-                                <input type="text" id="empresa" class="form-control" mdbInput [(ngModel)]="empresaInput" />
-                                <label for="empresa">Empresa:&nbsp;</label>
-                            </div>
-                            <div class="md-form">
+                             <div class="md-form">
                                 <input type="text" id="idEmpresa" class="form-control" mdbInput [(ngModel)]="idEmpresaInput" />
                                 <label for="idEmpresa">Id de la empresa:&nbsp;</label>
                             </div>
                             <div class="md-form">
-                                <input type="date" id="fecha" class="form-control" mdbInput [(ngModel)]="fechaInput" />
-                                <label for="fehca">Fecha de Nacimiento:&nbsp;</label>
+                                <input type="text" id="empresa" class="form-control" mdbInput [(ngModel)]="empresaInput" />
+                                <label for="empresa">Empresa:&nbsp;</label>
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" mdbBtn color="secondary" class="waves-light" aria-label="Close"
+                            <button type="button" mdbBtn color="brown" class="waves-light" aria-label="Close"
                                 (click)="basicModal.hide()" mdbWavesEffect>
                                 Cerrar
                             </button>
-                            <button type="button" mdbBtn color="primary" class="relative waves-light" mdbWavesEffect (click)="
+                            <button type="button" mdbBtn color="cyan" class="relative waves-light" mdbWavesEffect (click)="
                           usuarioIndice == null ? createUsuario() : guardarEdicionUsuario()
                         ">
                                 Guardar
