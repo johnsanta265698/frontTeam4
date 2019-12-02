@@ -6,7 +6,7 @@ import { EmpleadorService } from 'src/app/services/empleador.services';
 })
 export class EmpleadorComponent implements OnInit {
     public empleadores = [];
-    public headElements = ["Id","Documento", "Nombre", "Actividad", "Email", "Direccion", "Teléfono", "Opciones"];
+    public headElements = ["Id","Documento", "Nombre", "Actividad", "Direccion", "Teléfono", "Opciones"];
     public empleadorIndice = null;
 
     public nombreInput = "";
