@@ -6,10 +6,14 @@ import { UsersServices } from 'src/app/services/users.services';
 })
 export class UsersComponent implements OnInit {
   public usuarios = [];
-  public headElements = ["Id","Documento", "Nombre", "Apellidos",  "Telefono", "ID de la empresa", "Empresa", "Opciones"];
+  public headElements = ["Id","Documento", "Nombre", "Apellidos",  "Direccion", "Empresa", "Opciones"];
   public usuarioIndice = null;
 
   public nombreInput = "";
+  public documentoInput = "";
+  public apellidoInput = "";
+  public empresaInput = "";
+  public direccionInput = "";
 
     constructor(private usuariosService: UsersServices) {}
   
@@ -37,7 +41,12 @@ export class UsersComponent implements OnInit {
     createUsuario(): void {
       this.usuarioIndice = null;
       const nuevoUsuario: any = {
-        nombre: this.nombreInput || ""
+        numeroDocumento: this.documentoInput,
+        nombre: this.nombreInput,
+        apellido: this.apellidoInput,
+        nombreEmpresa: this.empresaInput,
+        direccion: this.direccionInput,
+
       };
       console.log("click createUsuario === ", { nuevoUsuario });
       this.usuariosService.createUsuario(nuevoUsuario).subscribe(data => {

@@ -6,7 +6,7 @@ import { Observable } from "rxjs";
 @Injectable()
 export class UsersServices {
   constructor(private http: HttpClient) {}
-  private _empleado = "localhost:8080/heinsohn-api/rest/v2/empleados"
+  private _empleado = "http://localhost:8080/heinsohnv2-api/rest/v2/empleados"
   getUsuarios(): Observable<IUsuario[]> {
     return this.http.get<IUsuario[]>(
       `${this._empleado}`
@@ -16,7 +16,7 @@ export class UsersServices {
 
   deleteUsuario(indice: number): Observable<any>{
     return this.http.delete<any>(
-      `${this._empleado}/${indice}`
+      `${this._empleado}?numeroDocumento=${indice}`
       //`https://bootcamp-dia-3.camilomontoyau.now.sh/usuarios/${indice}`
     );
   }
@@ -43,12 +43,9 @@ export class UsersServices {
     };
 
     return this.http.put<IUsuario>(
-      `${this._empleado}/usuarios/${indice}`,
+      `${this._empleado}/usuarios`,
       usuario,
       httpOptions
     )
-
-
   }
-
 }

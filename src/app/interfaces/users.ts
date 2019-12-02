@@ -1,8 +1,8 @@
 export default interface IUsuario {
-    documento: string;
+    numeroDocumento: string;
     nombre: string;
-    apellidos: string;
+    apellido: string;
     telefono: string;
-    idEmpresa: Int16Array;
-    empresa: string;
+    nombreEmpresa: Int16Array;
+    direccion: string;
   }
