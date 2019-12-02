@@ -105,6 +105,9 @@
                                 {{empleador.telefono}}
                             </td>
                             <td>
+                                <button type="button" mdbBtn color="info" class="relative waves-light" mdbWavesEffect>
+                                    Consultar
+                                </button>
                                 <button type="button" mdbBtn color="warning" class="relative waves-light" mdbWavesEffect (click)="editUsuarioPopularForm(i); basicModal.show()">
                                     Modificar
                                 </button>
@@ -121,12 +124,10 @@
                         <td>admin@heinsohn.com.co</td>
                         <td>Calle falsa 123</td>
                         <td>2178264</td>
-                        <!-- <td>
+                        <td>
                             <button type="button" mdbBtn color="info" class="relative waves-light" mdbWavesEffect>
                                 Consultar
                             </button>
-                        </td> -->
-                        <td>
                             <button type="button" mdbBtn color="warning" class="relative waves-light" mdbWavesEffect>
                                 Modificar
                             </button>

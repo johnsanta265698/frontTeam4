@@ -185,6 +185,9 @@
                             <td>1</td>
                             <td>HeinSohn</td>
                             <td>
+                                <button type="button" mdbBtn color="info" class="relative waves-light" mdbWavesEffect>
+                                    Consultar
+                                </button>
                                 <button type="button" mdbBtn color="warning" class="relative waves-light" mdbWavesEffect (click)="editUsuarioPopularForm(i); basicModal.show()">
                                     Modificar
                                 </button>
@@ -202,6 +205,9 @@
                             <td>3</td>
                             <td>El colegio</td>
                             <td>
+                                <button type="button" mdbBtn color="info" class="relative waves-light" mdbWavesEffect>
+                                    Consultar
+                                </button>
                                 <button type="button" mdbBtn color="warning" class="relative waves-light" mdbWavesEffect>
                                     Modificar
                                 </button>
@@ -218,12 +224,10 @@
                             <td>3045795006</td>
                             <td>2</td>
                             <td>Dorsal10</td>
-                            <!-- <td>
+                            <td>
                                 <button type="button" mdbBtn color="info" class="relative waves-light" mdbWavesEffect>
                                     Consultar
                                 </button>
-                            </td> -->
-                            <td>
                                 <button type="button" mdbBtn color="warning" class="relative waves-light" mdbWavesEffect>
                                     Modificar
                                 </button>
@@ -268,12 +272,12 @@
                                 <label for="celular">Celular:&nbsp;</label>
                             </div>
                             <div class="md-form">
-                                <input type="text" id="direccion" class="form-control" mdbInput [(ngModel)]="direccionInput" />
-                                <label for="direccion">Dirección:&nbsp;</label>
-                            </div>
-                            <div class="md-form">
                                 <input type="text" id="empresa" class="form-control" mdbInput [(ngModel)]="empresaInput" />
                                 <label for="empresa">Empresa:&nbsp;</label>
+                            </div>
+                            <div class="md-form">
+                                <input type="text" id="idEmpresa" class="form-control" mdbInput [(ngModel)]="idEmpresaInput" />
+                                <label for="idEmpresa">Id de la empresa:&nbsp;</label>
                             </div>
                             <div class="md-form">
                                 <input type="date" id="fecha" class="form-control" mdbInput [(ngModel)]="fechaInput" />
