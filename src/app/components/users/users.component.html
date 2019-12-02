@@ -108,12 +108,31 @@
                 <table mdbTable class="table" striped="true">
                     <thead class="black white-text">
                         <tr>
-                            <th colspan="4">Datos de los empleados</th>
-                            <th colspan="4">
-                                <button type="button" mdbBtn color="success" class="relative waves-light" mdbWavesEffect
-                                    (click)="basicModal.show()">
-                                    Crear Usuario
-                                </button>
+                            <th colspan="8">
+                                Datos de los empleados
+                            </th>
+                        </tr>
+                        <tr>
+                            <th colspan="8">
+                                <form>
+                                    <div class="form row align-items-center">
+                                        <div class="col-6">
+                                            <div class="md-form">
+                                                <input mdbInput type="text" class="form-control mb-2" id="inlineFormInputMD" placeholder="Busqueda por empresa">
+                                                <label class="sr-only" for="inlineFormInputMD">Busqueda por nombre de la empresa</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <button type="submit" mdbBtn color="primary" class="relative">Buscar</button>
+                                        </div>
+                                        <div class="col-3">
+                                            <button type="button" mdbBtn color="success" class="relative waves-light" mdbWavesEffect
+                                                (click)="basicModal.show()">
+                                                Crear Usuario
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
                             </th>
                         </tr>
                         <tr>
@@ -162,9 +181,9 @@
                             <td>123456</td>
                             <td>Julián Esteban</td>
                             <td>Madrid Ospina</td>
-                            <td>Avenida Siempreviva</td>
                             <td>3104196067</td>
-                            <td>Software Evolution</td>
+                            <td>1</td>
+                            <td>HeinSohn</td>
                             <td>
                                 <button type="button" mdbBtn color="warning" class="relative waves-light" mdbWavesEffect (click)="editUsuarioPopularForm(i); basicModal.show()">
                                     Modificar
@@ -179,8 +198,8 @@
                             <td>2013090573907</td>
                             <td>Edward Andrés</td>
                             <td>Madrid Moreno</td>
-                            <td>Avenida Siempreviva</td>
                             <td>3104196066</td>
+                            <td>3</td>
                             <td>El colegio</td>
                             <td>
                                 <button type="button" mdbBtn color="warning" class="relative waves-light" mdbWavesEffect>
@@ -196,8 +215,8 @@
                             <td>1016941017</td>
                             <td>Cecilia</td>
                             <td>Moreno Hincapié</td>
-                            <td>Avenida Siempreviva</td>
                             <td>3045795006</td>
+                            <td>2</td>
                             <td>Dorsal10</td>
                             <!-- <td>
                                 <button type="button" mdbBtn color="info" class="relative waves-light" mdbWavesEffect>
@@ -255,6 +274,10 @@
                             <div class="md-form">
                                 <input type="text" id="empresa" class="form-control" mdbInput [(ngModel)]="empresaInput" />
                                 <label for="empresa">Empresa:&nbsp;</label>
+                            </div>
+                            <div class="md-form">
+                                <input type="date" id="fecha" class="form-control" mdbInput [(ngModel)]="fechaInput" />
+                                <label for="fehca">Fecha de Nacimiento:&nbsp;</label>
                             </div>
                         </div>
                         <div class="modal-footer">

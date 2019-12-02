@@ -6,7 +6,7 @@ import { UsersServices } from 'src/app/services/users.services';
 })
 export class UsersComponent implements OnInit {
   public usuarios = [];
-  public headElements = ["Id","Documento", "Nombre", "Apellidos", "Direccion", "Telefono", "Empresa", "Opciones"];
+  public headElements = ["Id","Documento", "Nombre", "Apellidos",  "Telefono", "ID de la empresa", "Empresa", "Opciones"];
   public usuarioIndice = null;
 
   public nombreInput = "";
